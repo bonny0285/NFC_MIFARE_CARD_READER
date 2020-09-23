@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UidCardCell" customModule="NFC_Card_Reader" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UidCardCell" rowHeight="158" id="KGk-i7-Jjw" customClass="UidCardCell" customModule="NFC_Card_Reader" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="452" height="158"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="452" height="158"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dmy-iF-wqE">
+                        <rect key="frame" x="0.0" y="0.0" width="452" height="158"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="lYk-gM-0ci">
+                                <rect key="frame" x="174.5" y="53.5" width="103" height="51"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UID Card:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laZ-su-hMx">
+                                        <rect key="frame" x="0.0" y="0.0" width="103" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="Zr6-tc-KO4"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0000000000" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4v-ob-QrK">
+                                        <rect key="frame" x="0.0" y="27" width="103" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="Iol-cA-TVb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lYk-gM-0ci" firstAttribute="centerY" secondItem="Dmy-iF-wqE" secondAttribute="centerY" id="HpY-ai-Ir4"/>
+                            <constraint firstItem="lYk-gM-0ci" firstAttribute="centerX" secondItem="Dmy-iF-wqE" secondAttribute="centerX" id="sKY-6l-s1i"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Dmy-iF-wqE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="4HU-kk-z3f"/>
+                    <constraint firstAttribute="trailing" secondItem="Dmy-iF-wqE" secondAttribute="trailing" id="6zn-n1-ZPj"/>
+                    <constraint firstItem="Dmy-iF-wqE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="cvG-rR-7HK"/>
+                    <constraint firstAttribute="bottom" secondItem="Dmy-iF-wqE" secondAttribute="bottom" id="zTi-WG-6ep"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="cardName" destination="x4v-ob-QrK" id="zwC-I3-JPH"/>
+                <outlet property="containerView" destination="Dmy-iF-wqE" id="uyX-yD-EpH"/>
+                <outlet property="uidCard" destination="laZ-su-hMx" id="gMP-Tc-eQf"/>
+            </connections>
+            <point key="canvasLocation" x="44.927536231884062" y="30.803571428571427"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
